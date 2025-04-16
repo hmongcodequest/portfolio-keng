@@ -6,7 +6,12 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   base: process.env.VITE_BASE_PATH || '/',
-  // server.allowedHosts
+  preview: {
+		port: 5173,
+		strictPort: true,
+		host: '0.0.0.0', 
+		allowedHosts: true,
+	},
   server: {
     allowedHosts: true
   }
