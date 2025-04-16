@@ -1,18 +1,18 @@
-import React, { useState, useEffect } from 'react';
+// import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdEdit, MdDelete, MdDragIndicator } from 'react-icons/md';
 import Layout from '../../../components/Controls/Layout';
 
-interface Category {
-    id: number;
-    name: string;
-    description: string;
-    projectCount: number;
-    color: string;
-}
+// interface Category {
+//     id: number;
+//     name: string;
+//     description: string;
+//     projectCount: number;
+//     color: string;
+// }
 
 export default function Categories() {
-    const [categories, setCategories] = useState<Category[]>([
+    const categories =[
         {
             id: 1,
             name: 'Web Development',
@@ -27,7 +27,7 @@ export default function Categories() {
             projectCount: 3,
             color: '#10B981'
         }
-    ]);
+    ];
 
     // API call to fetch categories
     // useEffect(() => {

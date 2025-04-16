@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdInbox, MdArchive, MdDelete, MdStar, MdStarBorder, MdReply } from 'react-icons/md';
 import Layout from '../../../components/Controls/Layout';

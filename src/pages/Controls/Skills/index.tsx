@@ -1,19 +1,19 @@
-import  { useState } from 'react';
+// import  { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdEdit, MdDelete, MdStar } from 'react-icons/md';
 import Layout from '../../../components/Controls/Layout';
 
-interface Skill {
-    id: number;
-    name: string;
-    category: string;
-    proficiency: number;
-    yearsOfExperience: number;
-    isFeatured: boolean;
-}
+// interface Skill {
+//     id: number;
+//     name: string;
+//     category: string;
+//     proficiency: number;
+//     yearsOfExperience: number;
+//     isFeatured: boolean;
+// }
 
 export default function Skills() {
-    const [skills, setSkills] = useState<Skill[]>([
+    const skills =[
         {
             id: 1,
             name: 'React',
@@ -30,7 +30,8 @@ export default function Skills() {
             yearsOfExperience: 2,
             isFeatured: true
         }
-    ]);
+    ];
+
 
     const categories = ['Frontend', 'Backend', 'Database', 'DevOps'];
 

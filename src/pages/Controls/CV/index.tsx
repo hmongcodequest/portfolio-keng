@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+// import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdEdit, MdDelete, MdDragIndicator, MdDownload } from 'react-icons/md';
 import Layout from '../../../components/Controls/Layout';
 
-interface CVSection {
-    id: number;
-    type: 'education' | 'experience' | 'skills';
-    title: string;
-    institution?: string;
-    location?: string;
-    startDate: string;
-    endDate?: string;
-    description: string[];
-}
+// interface CVSection {
+//     id: number;
+//     type: 'education' | 'experience' | 'skills';
+//     title: string;
+//     institution?: string;
+//     location?: string;
+//     startDate: string;
+//     endDate?: string;
+//     description: string[];
+// }
 
 export default function CV() {
-    const [sections, setSections] = useState<CVSection[]>([
+    const sections =[
         {
             id: 1,
             type: 'education',
@@ -39,7 +39,7 @@ export default function CV() {
                 'Collaborated with cross-functional teams'
             ]
         }
-    ]);
+    ];
 
     return (
         <Layout>

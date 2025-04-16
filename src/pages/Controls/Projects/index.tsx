@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdEdit, MdDelete, MdLink } from 'react-icons/md';
 import Layout from '../../../components/Controls/Layout';
@@ -14,7 +14,20 @@ interface Project {
 }
 
 export default function Projects() {
-    const [projects, setProjects] = useState<Project[]>([
+    // const [projects, setProjects] = useState<Project[]>([
+    //     {
+    //         id: 1,
+    //         title: 'Portfolio Website',
+    //         description: 'Personal portfolio website built with React and TailwindCSS',
+    //         image: '/project1.jpg',
+    //         link: 'https://example.com',
+    //         technologies: ['React', 'TailwindCSS', 'TypeScript'],
+    //         status: 'active'
+    //     },
+    //     // Add more sample projects here
+    // ]);
+
+    const projects: Project[] = [
         {
             id: 1,
             title: 'Portfolio Website',
@@ -24,8 +37,7 @@ export default function Projects() {
             technologies: ['React', 'TailwindCSS', 'TypeScript'],
             status: 'active'
         },
-        // Add more sample projects here
-    ]);
+    ]
 
     return (
         <Layout>
@@ -79,7 +91,7 @@ export default function Projects() {
                                     {project.title}
                                 </h3>
                                 <p className="text-gray-600 mb-4">{project.description}</p>
-                                
+
                                 <div className="flex flex-wrap gap-2 mb-4">
                                     {project.technologies.map((tech, index) => (
                                         <span

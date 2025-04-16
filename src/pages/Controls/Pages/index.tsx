@@ -1,20 +1,20 @@
-import React, { useState } from 'react';
+// import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MdAdd, MdEdit, MdDelete, MdVisibility, MdLink, MdDragIndicator } from 'react-icons/md';
 import Layout from '../../../components/Controls/Layout';
 
-interface Page {
-    id: number;
-    title: string;
-    slug: string;
-    status: 'published' | 'draft';
-    lastModified: string;
-    author: string;
-    views: number;
-}
+// interface Page {
+//     id: number;
+//     title: string;
+//     slug: string;
+//     status: 'published' | 'draft';
+//     lastModified: string;
+//     author: string;
+//     views: number;
+// }
 
 export default function Pages() {
-    const [pages, setPages] = useState<Page[]>([
+    const pages =[
         {
             id: 1,
             title: 'ໜ້າຫຼັກ',
@@ -33,7 +33,7 @@ export default function Pages() {
             author: 'Admin',
             views: 856
         }
-    ]);
+    ];
 
     return (
         <Layout>
