@@ -13,16 +13,21 @@ export default defineConfig({
 		allowedHosts: true,
 	},
   build: {
+    chunkSizeWarningLimit: 1000, // Increase size limit to 1000kb
     rollupOptions: {
-        output:{
-            manualChunks(id) {
-                if (id.includes('node_modules')) {
-                    return id.toString().split('node_modules/')[1].split('/')[0].toString();
-                }
-            }
+      output: {
+        manualChunks: {
+          // Vendor chunks
+          'react-vendor': ['react', 'react-dom'],
+          'router-vendor': ['react-router'],
+          'motion-vendor': ['framer-motion'],
+          'icons-vendor': ['react-icons'],
+          // Group other common dependencies
+          'utils-vendor': ['md5', 'styled-components'],
         }
+      }
     }
-},
+  },
   server: {
     allowedHosts: true
   }
